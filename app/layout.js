@@ -2,8 +2,8 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
-  title: { default: "Lab React + Next.js + MDX", template: "%s | Lab MDX" },
-  description: "Laboratório de React, Next.js e MDX com o contrato de conteúdo do Webtech Editor.",
+  title: { default: "Aurora Studio", template: "%s | Aurora Studio" },
+  description: "Objetos simples para quem passa o dia trabalhando.",
 };
 
 export default function RootLayout({ children }) {
@@ -11,9 +11,14 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <body>
         <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
-        <header><nav className="container" aria-label="Principal"><Link href="/">Webtech / Lab MDX</Link></nav></header>
+        <header><nav className="container nav" aria-label="Principal"><Link className="brand" href="/">Aurora Studio</Link>
+        <div className="nav-links">
+              <Link href="/#produtos">Produtos</Link>
+              <Link href="/#equipe">Equipe</Link>
+        </div>
+        </nav></header>
         <main id="conteudo" className="container">{children}</main>
-        <footer className="container">React, Next.js e conteúdo versionado.</footer>
+        <footer className="container">Aurora Studio. Conteúdo versionado em arquivos MDX.</footer>
       </body>
     </html>
   );
